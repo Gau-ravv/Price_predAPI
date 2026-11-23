@@ -14,5 +14,5 @@ def get_cached_prediction(key: str):
     return eval(value) if value else None
 
 
-def set_cached_prediction(key: str, value: dict):
+def set_cached_prediction(key: str, value: float):
     redis_client.set(key, str(value))
